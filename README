@@ -1,0 +1,22 @@
+A simple JPEG XL support implementation for doublecmd.
+Based on src/platform/unix/udcreadwebp.pas by Alexander Koblov
+
+Provides thumbnails for JXL pictures.
+Allows for viewing JXL pictures in the internal viewer.
+
+Works fine with libjxl 8.2 and doublecmd 1.0.11
+
+Currently:
+- For the animated pictures, processes only the first frame;
+- When reading a picture, attempts to convert it to rgba8bpc;
+- For libjxl loading, only the Linux ".so" library file extensions are used;
+- When InternalCheck() is called,  always returns true.
+
+To compile doublecmd with this:
+- Copy udcreadjxl.pas to src/platform/unix/
+- Add uDCReadJXL to the list within src/platform/uosforms.pas next to where uDCReadWebP is
+
+If you want to compile doublecmd for Windows, you can try the following:
+1. Change the library extensions within udcreadjxl.pas to ".dll";
+2. Copy udcreadjxl.pas to src/platform/win/
+3. Add uDCReadJXL to the list within src/platform/uosforms.pas under {$IF DEFINED(MSWINDOWS)}

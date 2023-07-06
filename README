@@ -4,7 +4,7 @@ Based on src/platform/unix/udcreadwebp.pas by Alexander Koblov
 Provides thumbnails for JXL pictures.
 Allows for viewing JXL pictures in the internal viewer.
 
-Works fine with libjxl 8.2 and doublecmd 1.0.11
+Works fine with libjxl 0.8.2 and doublecmd 1.0.11
 
 Currently:
 - For the animated pictures, processes only the first frame;

@@ -57,7 +57,7 @@ implementation
 uses
   InitC, DynLibs, IntfGraphics, GraphType, CTypes, DCOSUtils;
 
-// codestream_header.h 8.2
+// codestream_header.h 0.8.2
 type
   JxlBasicInfo = packed record
     have_container: cint; // JXL_BOOl
@@ -66,7 +66,7 @@ type
     other_stuff: array[0..1023] of cuint8; // we only access size
   end;
 
-// types.h 8.2
+// types.h 0.8.2
 type
   JxlPixelFormat = packed record
     num_channels: cint;
@@ -75,20 +75,20 @@ type
     align: csize_t;
   end;
 
-// color_encoding.h 8.2
+// color_encoding.h 0.8.2
 type
   JxlColorEncoding = packed record
     stuff: array[0..255] of cuint8; // no need to access members
   end;
 
 const
-  // decode.h 8.2
+  // decode.h 0.8.2
   JXL_DEC_BASIC_INFO = $40;
   JXL_DEC_COLOR_ENCODING = $100;
   JXL_DEC_FULL_IMAGE = $1000;
   JXL_DEC_ERROR = 1;
   JXL_DEC_SUCCESS = 0;
-  // types.h 8.2
+  // types.h 0.8.2
   JXL_TYPE_UINT8 = 2;
   JXL_NATIVE_ENDIAN = 0;
 
@@ -266,7 +266,7 @@ begin
     TPicture.RegisterFileFormat('jxl', 'JPEG XL Image', TJXLImage);
 
   except
-    Writeln('Couldn''t load libjxl');
+    Writeln('Couldn''t get the needed functions'' addresses from the loaded libjxl(_threads)');
   end;
 end;
 

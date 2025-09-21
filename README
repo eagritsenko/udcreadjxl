@@ -1,7 +1,7 @@
 A simple JPEG XL support implementation for doublecmd.
 
-=========== You probably don't need this, since JXL support has been implemented in doublecmd officially ======
-=========== https://doublecmd.h1n.ru/viewtopic.php?t=8636&sid=6364c2727384e356f89de6fd876b3e76 ================
+=========== You probably don't need this, as JXL support has been implemented in doublecmd officially since May 2025 ======
+=========== https://doublecmd.h1n.ru/viewtopic.php?t=8636&sid=6364c2727384e356f89de6fd876b3e76 ============================
 
 Based on src/platform/unix/udcreadwebp.pas by Alexander Koblov
 
